@@ -1,0 +1,122 @@
+$breakpoints: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+@mixin responsive-styles {
+  @media (min-width: map-get($breakpoints, xs)) {
+    .container{
+      background: #f59898;
+      }
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      color: red;
+    }
+    button {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, sm)) {
+    .container{
+      background: #581616;
+      }
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      color: green;
+    }
+    button {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, md)) {
+    .container{
+      background: #3fac0d;
+      }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      color: purple;
+    }
+    button {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    .container{
+      background: #0fadd4;
+      }
+    h1 {
+      font-size: 44px;
+    }
+    p {
+      color: orange;
+    }
+    button {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, xl)) {
+    .container{
+      background: #a909da;
+      }
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      color: brown;
+    }
+    button {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: map-get($breakpoints, xxl)) {
+    .container{
+      background: #ff008c;
+      }
+    h1 {
+      font-size: 52px;
+    }
+    p {
+      color: navy;
+    }
+    button {
+      font-size: 22px;
+    }
+  }
+}
+
+
+  .container{
+  background: #000;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 20px;
+    color: blue;
+  }
+  button {
+    background: #000;
+    color: #FFF;
+    font-size: 16px;
+  }
+
+  // Apply the responsive styles
+  @include responsive-styles;
+
